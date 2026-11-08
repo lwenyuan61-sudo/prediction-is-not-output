@@ -6,7 +6,7 @@
 
 Code, run logs, tables and figures for the paper *Prediction Is Not Output: One Head Cannot Do Both, Two Heads Can* (Wenyuan Li, 2026).
 
-[PDF](paper/Prediction_Is_Not_Output.pdf) · [Zenodo](https://doi.org/10.5281/zenodo.24054274) · [aiXiv](https://aixiv.science/abs/aixiv.261108.000002)
+[Project page](https://lwenyuan61-sudo.github.io/prediction-is-not-output/) · [PDF](paper/Prediction_Is_Not_Output.pdf) · [Zenodo](https://doi.org/10.5281/zenodo.24054274) · [aiXiv](https://aixiv.science/abs/aixiv.261108.000002)
 
 ## The finding
 

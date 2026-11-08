@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prediction Is Not Output: One Head Cannot Do Both, Two Heads Can</title>
+<meta name="description" content="A language model uses one output head both to predict what other people write and to produce its own replies. One head trained on both can only reach a mixture of the two targets. Two heads on a shared trunk keep both right.">
+<meta name="author" content="Wenyuan Li">
+<link rel="canonical" href="https://lwenyuan61-sudo.github.io/prediction-is-not-output/">
+<meta name="citation_title" content="Prediction Is Not Output: One Head Cannot Do Both, Two Heads Can">
+<meta name="citation_author" content="Li, Wenyuan">
+<meta name="citation_author_institution" content="Australian National University">
+<meta name="citation_author_orcid" content="0009-0004-2391-8508">
+<meta name="citation_publication_date" content="2026/11/08">
+<meta name="citation_doi" content="10.5281/zenodo.24054274">
+<meta name="citation_language" content="en">
+<meta name="citation_publisher" content="Zenodo">
+<meta name="citation_pdf_url" content="https://lwenyuan61-sudo.github.io/prediction-is-not-output/Prediction_Is_Not_Output.pdf">
+<meta name="citation_abstract_html_url" content="https://lwenyuan61-sudo.github.io/prediction-is-not-output/">
+<meta name="citation_keywords" content="language models; post-training; catastrophic forgetting; multi-head architectures; prediction and action; computational neuroscience">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Prediction Is Not Output: One Head Cannot Do Both, Two Heads Can",
+  "name": "Prediction Is Not Output: One Head Cannot Do Both, Two Heads Can",
+  "author": {
+    "@type": "Person",
+    "name": "Wenyuan Li",
+    "sameAs": "https://orcid.org/0009-0004-2391-8508",
+    "affiliation": {"@type": "Organization", "name": "Australian National University"}
+  },
+  "datePublished": "2026-11-08",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "identifier": {"@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.24054274"},
+  "url": "https://lwenyuan61-sudo.github.io/prediction-is-not-output/",
+  "sameAs": ["https://doi.org/10.5281/zenodo.24054274", "https://aixiv.science/abs/aixiv.261108.000002"],
+  "codeRepository": "https://github.com/lwenyuan61-sudo/prediction-is-not-output",
+  "keywords": "language models, post-training, catastrophic forgetting, multi-head architectures, prediction and action, computational neuroscience",
+  "abstract": "A language model uses one output head for two jobs: predicting what other people write, and producing its own replies. Where the text states a fact correctly, the two jobs ask for the same output. Where the people in the text are wrong, they do not: a good prediction reproduces their mistakes, and a good reply does not. One head trained on both jobs can only reach a weighted mixture of the two targets, which is wrong for both, whether the replies are trained by supervised fine-tuning, by reinforcement learning or by KL-regularized RLHF. In a small transformer in a synthetic world where every target is known, a model with two heads on a shared trunk, one trained to predict and one trained to answer, keeps both jobs right."
+}
+</script>
+<style>
+:root { --bg:#fff; --fg:#1b1f27; --dim:#5b6472; --line:#dfe3ea; --link:#1558c0; --code:#f4f6f9; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0f141c; --fg:#e8ecf2; --dim:#9aa5b5; --line:#2a3340; --link:#7fb2ff; --code:#1a212c; } }
+html { background:var(--bg); }
+body { max-width:46rem; margin:0 auto; padding:2.5rem 1rem 4rem; color:var(--fg); background:var(--bg); font:17px/1.65 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif; }
+h1 { font-size:1.9rem; line-height:1.25; margin:0 0 .6rem; }
+h2 { font-size:1.2rem; margin:2.2rem 0 .6rem; }
+.by, .note { color:var(--dim); }
+.links a { margin-right:1.1rem; white-space:nowrap; }
+a { color:var(--link); }
+table { border-collapse:collapse; width:100%; font-size:.93rem; display:block; overflow-x:auto; }
+th, td { border-bottom:1px solid var(--line); padding:.45rem .6rem .45rem 0; text-align:left; }
+pre { background:var(--code); padding:.9rem; overflow-x:auto; font-size:.85rem; border-radius:6px; }
+</style>
+</head>
+<body>
+<main>
+<h1>Prediction Is Not Output: One Head Cannot Do Both, Two Heads Can</h1>
+<p class="by">Wenyuan Li · Australian National University · 2026 · <a href="https://orcid.org/0009-0004-2391-8508">ORCID</a></p>
+<p class="links"><a href="Prediction_Is_Not_Output.pdf">PDF</a><a href="https://doi.org/10.5281/zenodo.24054274">DOI 10.5281/zenodo.24054274</a><a href="https://github.com/lwenyuan61-sudo/prediction-is-not-output">Code and logs</a><a href="https://aixiv.science/abs/aixiv.261108.000002">aiXiv</a></p>
+
+<h2>Abstract</h2>
+<p>A language model uses one output head for two jobs: predicting what other people write, and producing its own replies. Where the text states a fact correctly, the two jobs ask for the same output. Where the people in the text are wrong, they do not: a good prediction reproduces their mistakes, and a good reply does not. We prove that one head trained on both jobs cannot do both well. Its best possible output is a weighted mixture of the two targets, which is wrong for both, whether the replies are trained by supervised fine-tuning, by reinforcement learning or by KL-regularized RLHF. We test this with a small transformer in a synthetic world where every target is known. A single head trained first to predict and then to answer, as language models are, forgets how to predict. A single head trained on both jobs at once answers correctly, but then expects other speakers to answer correctly 99% of the time, although only half of them do; when answering is given less weight, the same head instead answers the way the other speakers do, mistakes included. A model with two heads on a shared trunk, one trained to predict and one trained to answer, keeps both jobs right in every setting we tried. The price is speed: facts that appear only in plain statements reach the separate answering head more slowly.</p>
+
+<h2>Why one output head cannot do both</h2>
+<p>Suppose that, in the training text, half of the people who answer a question name the right city, a fifth say "I don't know" and the rest name a wrong city. To predict the next word, a model must reproduce these proportions. To answer the question itself, it must name the right city. If one head does both, it can put out only one distribution after this context. Trained on both targets with weights &lambda; and 1&minus;&lambda;, the best it can do is the mixture &lambda;p + (1&minus;&lambda;)a. Two heads remove the conflict: the prediction loss trains one output and the action losses train the other. The conflict arises only in contexts the model cannot tell apart from its own turn.</p>
+
+<h2>Results in the synthetic world</h2>
+<table>
+<thead><tr><th>Variant</th><th>Held-out accuracy (%)</th><th>Prediction loss after "I:" (bits; minimum 2.85)</th><th>Outcome</th></tr></thead>
+<tbody>
+<tr><td>One head, predict then act</td><td>97.0</td><td>16.45</td><td>Forgets how to predict</td></tr>
+<tr><td>One head, trained jointly</td><td>98.8</td><td>8.48</td><td>Expects others to be right 99% of the time</td></tr>
+<tr><td>Two heads, trained jointly</td><td>94.6</td><td>3.16</td><td>Both jobs right</td></tr>
+<tr><td>Two heads, shared unembedding</td><td>98.1</td><td>3.25</td><td>Both jobs right</td></tr>
+</tbody>
+</table>
+<p class="note">Mean over 5 seeds. Every number can be rebuilt from the published logs with one command.</p>
+
+<h2>Scope</h2>
+<p>The world is synthetic and small: a transformer of about 1.5 million parameters. A pretrained language model has not been tested. The repository invites that test.</p>
+
+<h2>How this was made</h2>
+<p>The author conceived the study, set its question and its claims, and directed the experiments. An AI assistant (Claude, Anthropic) wrote the experiment code, ran the experiments, made the figures and wrote the text under the author's direction.</p>
+
+<h2>中文摘要</h2>
+<p><strong>预测不是输出：一个头做不到两件事，两个头可以。</strong>语言模型用同一个输出头做两件事：预测别人会写什么，和说出自己的回答。文字里的人说错时，这两件事要的结果不同。一个头同时学两件事，最优结果只能是两者的混合，两边都不对；监督微调、强化学习和带 KL 约束的 RLHF 都是如此。在一个每个答案都已知的合成世界里，用小型 transformer 做实验，共享主干上的两个头，一个预测、一个回答，两件事都能做对；代价是只在陈述句里出现的事实，传到回答头更慢。尚未在预训练的大语言模型上检验。</p>
+
+<h2>Cite</h2>
+<pre>@misc{li2026prediction,
+  title     = {Prediction Is Not Output: One Head Cannot Do Both, Two Heads Can},
+  author    = {Li, Wenyuan},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.24054274},
+  url       = {https://doi.org/10.5281/zenodo.24054274}
+}</pre>
+</main>
+</body>
+</html>

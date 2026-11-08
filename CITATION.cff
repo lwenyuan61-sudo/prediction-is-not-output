@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the paper."
+title: "Prediction Is Not Output: code, run logs and figures"
+type: software
+authors:
+  - family-names: Li
+    given-names: Wenyuan
+    orcid: "https://orcid.org/0009-0004-2391-8508"
+    affiliation: "Australian National University"
+repository-code: "https://github.com/lwenyuan61-sudo/prediction-is-not-output"
+license: Apache-2.0
+date-released: 2026-11-09
+preferred-citation:
+  type: generic
+  title: "Prediction Is Not Output: One Head Cannot Do Both, Two Heads Can"
+  authors:
+    - family-names: Li
+      given-names: Wenyuan
+      orcid: "https://orcid.org/0009-0004-2391-8508"
+      affiliation: "Australian National University"
+  year: 2026
+  publisher:
+    name: Zenodo
+  doi: 10.5281/zenodo.24054274
+  url: "https://doi.org/10.5281/zenodo.24054274"

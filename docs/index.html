@@ -17,7 +17,8 @@
 <meta name="citation_publisher" content="Zenodo">
 <meta name="citation_pdf_url" content="https://lwenyuan61-sudo.github.io/prediction-is-not-output/Prediction_Is_Not_Output.pdf">
 <meta name="citation_abstract_html_url" content="https://lwenyuan61-sudo.github.io/prediction-is-not-output/">
-<meta name="citation_keywords" content="language models; post-training; catastrophic forgetting; multi-head architectures; prediction and action; computational neuroscience">
+<meta name="citation_keywords" content="language models; large language models; LLM; transformer; post-training; supervised fine-tuning; reinforcement learning; RLHF; KL regularization; alignment tax; AI alignment; calibration; catastrophic forgetting; multi-task learning; multi-head architectures; output head; prediction and action; direction of fit; role tokens; user simulation; silicon sampling; predictive coding; active inference; efference copy; forward models; computational neuroscience">
+<meta name="keywords" content="language models, large language models, LLM, transformer, post-training, supervised fine-tuning, reinforcement learning, RLHF, KL regularization, alignment tax, AI alignment, calibration, catastrophic forgetting, multi-task learning, multi-head architectures, output head, prediction and action, direction of fit, role tokens, user simulation, silicon sampling, predictive coding, active inference, efference copy, forward models, computational neuroscience, 语言模型, 大语言模型, 大模型, 后训练, 监督微调, 强化学习, 对齐税, AI 对齐, 灾难性遗忘, 多任务学习, 多头结构, 输出头, 预测与行动, 预测编码, 主动推断, 传出副本, 计算神经科学">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -38,7 +39,7 @@
   "url": "https://lwenyuan61-sudo.github.io/prediction-is-not-output/",
   "sameAs": ["https://doi.org/10.5281/zenodo.24054274", "https://aixiv.science/abs/aixiv.261108.000002"],
   "codeRepository": "https://github.com/lwenyuan61-sudo/prediction-is-not-output",
-  "keywords": "language models, post-training, catastrophic forgetting, multi-head architectures, prediction and action, computational neuroscience",
+  "keywords": "language models, large language models, LLM, transformer, post-training, supervised fine-tuning, reinforcement learning, RLHF, KL regularization, alignment tax, AI alignment, calibration, catastrophic forgetting, multi-task learning, multi-head architectures, output head, prediction and action, direction of fit, role tokens, user simulation, silicon sampling, predictive coding, active inference, efference copy, forward models, computational neuroscience",
   "abstract": "A language model uses one output head for two jobs: predicting what other people write, and producing its own replies. Where the text states a fact correctly, the two jobs ask for the same output. Where the people in the text are wrong, they do not: a good prediction reproduces their mistakes, and a good reply does not. One head trained on both jobs can only reach a weighted mixture of the two targets, which is wrong for both, whether the replies are trained by supervised fine-tuning, by reinforcement learning or by KL-regularized RLHF. In a small transformer in a synthetic world where every target is known, a model with two heads on a shared trunk, one trained to predict and one trained to answer, keeps both jobs right."
 }
 </script>
@@ -89,6 +90,10 @@ pre { background:var(--code); padding:.9rem; overflow-x:auto; font-size:.85rem; 
 
 <h2>中文摘要</h2>
 <p><strong>预测不是输出：一个头做不到两件事，两个头可以。</strong>语言模型用同一个输出头做两件事：预测别人会写什么，和说出自己的回答。文字里的人说错时，这两件事要的结果不同。一个头同时学两件事，最优结果只能是两者的混合，两边都不对；监督微调、强化学习和带 KL 约束的 RLHF 都是如此。在一个每个答案都已知的合成世界里，用小型 transformer 做实验，共享主干上的两个头，一个预测、一个回答，两件事都能做对；代价是只在陈述句里出现的事实，传到回答头更慢。尚未在预训练的大语言模型上检验。</p>
+
+<h2>Keywords</h2>
+<p>language models, large language models (LLM), transformer, post-training, supervised fine-tuning, reinforcement learning, RLHF, KL regularization, alignment tax, AI alignment, calibration, catastrophic forgetting, multi-task learning, multi-head architectures, output head, prediction and action, direction of fit, role tokens, user simulation, silicon sampling, predictive coding, active inference, efference copy, forward models, computational neuroscience</p>
+<p>语言模型、大语言模型、大模型、后训练、监督微调、强化学习、RLHF、对齐税、AI 对齐、灾难性遗忘、多任务学习、多头结构、输出头、预测与行动、预测编码、主动推断、传出副本、计算神经科学</p>
 
 <h2>Cite</h2>
 <pre>@misc{li2026prediction,
